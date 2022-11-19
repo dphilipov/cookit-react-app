@@ -1,0 +1,59 @@
+.button {
+  background-color: $red-highlight;
+  color: $red-highlight;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  &.before {
+    flex-direction: row-reverse;
+  }
+
+  .after {
+    flex-direction: row;
+  }
+
+  svg {
+    width: 20px;
+    fill: $white;
+    height: 20px;
+  }
+
+  &.theme-full {
+    color: $white;
+
+    &:hover {
+      background-color: $dark-red-highlight;
+    }
+  }
+
+  &.theme-text {
+    background-color: transparent;
+    padding: 10px 0;
+  }
+
+  &.theme-semi {
+    background-color: transparent;
+    border: 1px solid $red-highlight;
+
+    &:hover {
+      background-color: $red-highlight;
+      color: $white;
+    }
+  }
+
+  &.theme-icon {
+    background-color: transparent;
+    padding: 0;
+
+    svg {
+      fill: $red-highlight;
+    }
+
+    &:hover {
+      svg {
+        fill: $dark-red-highlight;
+      }
+    }
+  }
+}
