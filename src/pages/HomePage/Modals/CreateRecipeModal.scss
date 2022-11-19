@@ -1,0 +1,47 @@
+.modal {
+  .modal-content.create-new-recipe {
+    width: 700px;
+
+    .dropzone {
+      width: 100%;
+      height: 395px;
+    }
+
+    .create-recipe-form {
+      .image-preview-container {
+        aspect-ratio: 16/9;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+
+        .remove-image-button {
+          width: 30px;
+          top: 20px;
+          position: absolute;
+          right: 15px;
+        }
+
+        .image-preview {
+          height: 100%;
+          border-radius: 4px;
+        }
+      }
+
+      .input-container.recipe-name {
+        input {
+          border: none;
+          padding-left: 0;
+          font-weight: bold;
+        }
+      }
+
+      .ingredients-list-container {
+        display: flex;
+        column-gap: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
