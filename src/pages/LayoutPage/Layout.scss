@@ -1,0 +1,53 @@
+.header {
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    column-gap: 15px;
+    flex-flow: column;
+
+    h1 {
+      font-family: 'Pacifico', 'Roboto', sans-serif;
+      color: $red-highlight;
+      margin: 0;
+      font-size: 38px;
+    }
+
+    svg {
+      fill: $red-highlight;
+      width: 120px;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+
+  li {
+    list-style: none;
+
+    a {
+      font-weight: 500;
+    }
+  }
+}
+
+.content-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 50px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+
+  .footer-github-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
