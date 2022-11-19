@@ -1,0 +1,46 @@
+.card-container {
+  width: 235px;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+  }
+
+  .image-preview {
+    height: 140px;
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .recipe-content {
+    border-radius: 0 0 4px 4px;
+    flex: 1;
+    padding: 20px;
+    border: 1px solid $blueish-gray;
+    border-top: none;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+
+    .read-recipe-btn {
+      color: $black-highlight;
+
+      &:hover {
+        color: $red-highlight;
+      }
+    }
+
+    svg {
+      width: 35px;
+
+      &:hover {
+        fill: $red-highlight;
+      }
+    }
+  }
+}
