@@ -1,0 +1,23 @@
+.dropzone {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  border: 1px dashed $blueish-gray;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 100px;
+    fill: $blueish-gray;
+  }
+
+  &:hover {
+    border: 1px dashed $black-highlight;
+
+    svg {
+      fill: $black-highlight;
+    }
+  }
+}
