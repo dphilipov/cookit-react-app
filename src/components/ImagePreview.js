@@ -4,7 +4,7 @@ import { useImagePreview } from '../hooks';
 import { cx } from '../utils';
 
 function ImagePreview({ imageId, quality, className }) {
-  const imgPreview = useImagePreview('635305e903cd3', quality);
+  const imgPreview = useImagePreview(imageId, quality);
 
   const classes = ['image-preview', className];
 
