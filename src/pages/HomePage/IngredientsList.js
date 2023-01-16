@@ -15,16 +15,25 @@ function IngredientsList({ inputChangeHandler }) {
 
   const addIngredientHandler = e => {
     e.preventDefault();
-    console.log('Ingredient added');
+
+    setIngredientsList(prevState => [...prevState, ...defaultIngredient]);
+  };
+
+  const removeIngredientHandler = (e, idx) => {
+    e.preventDefault();
+
+    const newIngredientsList = [...ingredientsList];
+    newIngredientsList.splice(idx, 1);
+    setIngredientsList(newIngredientsList);
   };
 
   return (
     <div className="ingredients-list-container">
-      {ingredientsList.map(ingredient => {
+      {ingredientsList.map((ingredient, idx) => {
         const { name, quantity, measurement } = ingredient;
 
         return (
-          <div key={name} className="ingredients-row">
+          <div key={`name-${idx}`} className="ingredients-row">
             <Input
               inputId="ingredient"
               inputPlaceholder="Ingredient"
@@ -41,6 +50,7 @@ function IngredientsList({ inputChangeHandler }) {
               inputPlaceholder="Measurement"
               onChange={inputChangeHandler}
             />
+            <Button onClick={e => removeIngredientHandler(e, idx)}>-</Button>
           </div>
         );
       })}
