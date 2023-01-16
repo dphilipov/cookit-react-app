@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useImagePreview } from '../hooks';
 import { cx } from '../utils';
+import { DEFAULT_RECIPE_IMAGE } from '../constants';
 
-function ImagePreview({ imageId, quality, className }) {
+function ImagePreview({ imageId = DEFAULT_RECIPE_IMAGE, quality, className }) {
   const imgPreview = useImagePreview(imageId, quality);
 
   const classes = ['image-preview', className];
