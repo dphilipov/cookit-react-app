@@ -8,6 +8,7 @@ import {
   ImagePreview,
 } from '../../../components';
 import { ShoppingCart } from '../../../icons';
+import IngredientsList from '../IngredientsList';
 
 function CreateRecipeModal({ open, onClose }) {
   const [recipeImage, setRecipeImage] = useState(null);
@@ -74,25 +75,7 @@ function CreateRecipeModal({ open, onClose }) {
           textAreaPlaceholder="Recipe Description"
           onChange={inputChangeHandler}
         /> */}
-        <div className="ingredients-list-container">
-          <Input
-            inputId="ingredient"
-            inputPlaceholder="Ingredient"
-            onChange={inputChangeHandler}
-          />
-          <Input
-            inputId="quantity"
-            inputPlaceholder="Quantity"
-            inputType="number"
-            onChange={inputChangeHandler}
-          />
-          <Input
-            inputId="measurement"
-            inputPlaceholder="Measurement"
-            onChange={inputChangeHandler}
-          />
-          <Button onClick={e => addIngredientHandler(e)}>+</Button>
-        </div>
+        <IngredientsList />
         <TextArea
           textAreaId="recipe-instructions"
           textAreaValue=""
