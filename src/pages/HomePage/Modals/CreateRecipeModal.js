@@ -7,7 +7,7 @@ import {
   Dropzone,
   ImagePreview,
 } from '../../../components';
-import { ShoppingCart } from '../../../icons';
+import { Trash } from '../../../icons';
 import IngredientsList from '../IngredientsList';
 
 function CreateRecipeModal({ open, onClose }) {
@@ -28,17 +28,16 @@ function CreateRecipeModal({ open, onClose }) {
     );
   };
 
+  const deleteImageHandler = () => {
+    setRecipeImage(null);
+  };
+
   const clearModalState = () => {
     setRecipeImage(null);
   };
 
   const inputChangeHandler = () => {
     console.log('Input changed');
-  };
-
-  const addIngredientHandler = e => {
-    e.preventDefault();
-    console.log('Ingredient added');
   };
 
   return (
@@ -60,9 +59,12 @@ function CreateRecipeModal({ open, onClose }) {
         <div className="image-preview-container">
           {recipeImage ? (
             <>
-              <Button theme="icon" className="remove-image-button">
-                <ShoppingCart />
-              </Button>
+              <Button
+                theme="icon"
+                icon={<Trash />}
+                className="remove-image-button"
+                onClick={deleteImageHandler}
+              />
               <ImagePreview imageId="635305e903cd3" />
             </>
           ) : (
@@ -75,7 +77,7 @@ function CreateRecipeModal({ open, onClose }) {
           textAreaPlaceholder="Recipe Description"
           onChange={inputChangeHandler}
         /> */}
-        <IngredientsList />
+        <IngredientsList inputChangeHandler={inputChangeHandler} />
         <TextArea
           textAreaId="recipe-instructions"
           textAreaValue=""
