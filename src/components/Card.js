@@ -6,6 +6,10 @@ import { ShoppingCart } from '../icons';
 function Card({ recipe }) {
   const { name, description, imageId } = recipe;
 
+  const addToShoppingListHandler = () => {
+    console.log('Added');
+  };
+
   return (
     <div className="card-container">
       <ImagePreview imageId={imageId} quality={33} />
@@ -20,6 +24,7 @@ function Card({ recipe }) {
             className="add-ingredients-btn"
             icon={<ShoppingCart />}
             theme="icon"
+            onClick={addToShoppingListHandler}
           />
         </div>
       </div>
