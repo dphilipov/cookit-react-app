@@ -32,7 +32,7 @@ Input.propTypes = {
   labelText: PropTypes.string,
   inputId: PropTypes.string,
   onChange: PropTypes.func,
-  inputValue: PropTypes.string,
+  inputValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   inputPlaceholder: PropTypes.string,
   disabled: PropTypes.bool,
   inputType: PropTypes.oneOf(['text', 'number']),

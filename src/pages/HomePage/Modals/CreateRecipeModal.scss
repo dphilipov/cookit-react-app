@@ -39,8 +39,37 @@
 
       .ingredients-list-container {
         display: flex;
+        flex-direction: column;
         column-gap: 30px;
         margin-bottom: 30px;
+        row-gap: 20px;
+
+        .ingredients-row {
+          display: flex;
+          justify-content: space-between;
+
+          svg {
+            height: 35px;
+            width: 35px;
+          }
+        }
+
+        .add-new-ingredient {
+          width: 170px;
+
+          svg {
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+
+      .recipe-instructions {
+        display: flex;
+
+        textarea {
+          flex: 1;
+        }
       }
     }
   }

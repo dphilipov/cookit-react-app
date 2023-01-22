@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Input } from '../../components';
+import { PlusIcon, RemoveIcon } from '../../icons';
 
 const defaultIngredient = [
   {
@@ -37,24 +38,40 @@ function IngredientsList({ inputChangeHandler }) {
             <Input
               inputId="ingredient"
               inputPlaceholder="Ingredient"
+              inputValue={name}
               onChange={inputChangeHandler}
             />
             <Input
               inputId="quantity"
               inputPlaceholder="Quantity"
               inputType="number"
+              inputValue={quantity}
               onChange={inputChangeHandler}
             />
             <Input
               inputId="measurement"
               inputPlaceholder="Measurement"
+              inputValue={measurement}
               onChange={inputChangeHandler}
             />
-            <Button onClick={e => removeIngredientHandler(e, idx)}>-</Button>
+            {ingredientsList.length > 1 && (
+              <Button
+                onClick={e => removeIngredientHandler(e, idx)}
+                theme="icon"
+                icon={<RemoveIcon />}
+              />
+            )}
           </div>
         );
       })}
-      <Button onClick={e => addIngredientHandler(e)}>+</Button>
+      <Button
+        className="add-new-ingredient"
+        onClick={e => addIngredientHandler(e)}
+        icon={<PlusIcon />}
+        iconPosition="before"
+      >
+        ADD INGREDIENT
+      </Button>
     </div>
   );
 }

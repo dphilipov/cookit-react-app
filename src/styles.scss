@@ -84,6 +84,11 @@ textarea {
   color: $black-highlight;
 }
 
+input,
+textarea {
+  font-family: $font;
+}
+
 p,
 span {
   font-size: 14px;
