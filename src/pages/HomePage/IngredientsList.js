@@ -40,6 +40,7 @@ function IngredientsList({ inputChangeHandler }) {
               inputPlaceholder="Ingredient"
               inputValue={name}
               onChange={inputChangeHandler}
+              theme="semi"
             />
             <Input
               inputId="quantity"
@@ -47,12 +48,14 @@ function IngredientsList({ inputChangeHandler }) {
               inputType="number"
               inputValue={quantity}
               onChange={inputChangeHandler}
+              theme="semi"
             />
             <Input
               inputId="measurement"
               inputPlaceholder="Measurement"
               inputValue={measurement}
               onChange={inputChangeHandler}
+              theme="semi"
             />
             {ingredientsList.length > 1 && (
               <Button

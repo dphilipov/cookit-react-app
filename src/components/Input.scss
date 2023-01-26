@@ -14,3 +14,11 @@ textarea {
   padding-left: 10px;
   text-align: left;
 }
+
+input {
+  &.theme-semi {
+    border: none;
+    border-bottom: 1px solid $blueish-gray;
+    border-radius: 0;
+  }
+}
